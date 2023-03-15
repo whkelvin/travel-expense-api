@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'yarn prettier'
+yarn prettier
+
+echo 'yarn test'
+yarn test --passWithNoTests
+
+echo 'yarn lint'
+yarn lint
