@@ -1,4 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { PrismaClient, expense } from '@prisma/client';
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { NewTravelDto, TravelDto } from './models/travel-models';
 export * from './models/travel-models';
 
@@ -13,7 +15,7 @@ export const createItem = async (
       date: newTravel.date,
       */
       country: newTravel.country,
-      /*
+
       city: newTravel.city,
       category: newTravel.category,
       subcategory: newTravel.subcategory,
@@ -21,7 +23,6 @@ export const createItem = async (
       cost: newTravel.cost,
       paidOption: newTravel.paidOption,
       note: newTravel.note,
-      */
     },
   });
 
@@ -33,7 +34,7 @@ export const createItem = async (
     date: travel.date,
     */
     country: travel.country,
-    /*
+
     city: travel.city,
     category: travel.category,
     subcategory: travel.subcategory,
@@ -41,7 +42,6 @@ export const createItem = async (
     cost: travel.cost,
     paidOption: travel.paidOption,
     note: travel.note,
-    */
   };
   return travelDto;
 };

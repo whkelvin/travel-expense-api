@@ -1,5 +1,5 @@
 import * as travelController from '../controllers/travel-controller';
-import express = require('express');
+import express from 'express';
 
 const router = express.Router();
 

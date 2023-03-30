@@ -1,5 +1,8 @@
-import { NextFunction, Request, Response } from 'express';
-import { PostTravelRequest, PostTravelResponse } from './models/travel-models';
+import { type NextFunction, type Request, type Response } from 'express';
+import {
+  type PostTravelRequest,
+  type PostTravelResponse,
+} from './models/travel-models';
 import * as yup from 'yup';
 import * as travelService from '../services/applications/travel-service';
 
@@ -12,15 +15,14 @@ async function parsePostTravelRequest(
     date: yup.string().required(),
     */
     country: yup.string().required(),
-    /*
+
     city: yup.string().required(),
     category: yup.string().required(),
     subcategory: yup.string().required(),
     description: yup.string().required(),
     cost: yup.number().required().positive(),
     paidOption: yup.string().required(),
-    note: yup.string().required()
-    */
+    note: yup.string().required(),
   });
   await schema.validate(data, { strict: true });
   return data as PostTravelRequest;

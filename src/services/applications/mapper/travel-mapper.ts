@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/consistent-type-imports */
+import { number } from 'yup';
 import {
   PostTravelResponse,
   PostTravelRequest,
 } from '../../../controllers/models/travel-models';
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import {
   NewTravelDto,
   TravelDto,
@@ -17,15 +20,14 @@ export function postTravelRequestToCreateItemDto(
     date: postTravelRequest.date,
     */
     country: postTravelRequest.country,
-    /*
+
     city: postTravelRequest.city,
     category: postTravelRequest.category,
     subcategory: postTravelRequest.subcategory,
     description: postTravelRequest.description,
-    cost: postTravelRequest.cost,
+    cost: Number(postTravelRequest.cost),
     paidOption: postTravelRequest.paidOption,
     note: postTravelRequest.note,
-    */
   };
   return newTravelDto;
 }
@@ -39,15 +41,14 @@ export function travelDtoToPostTravelResponse(
     date: dto.date,
     */
     country: dto.country,
-    /*
+
     city: dto.city,
     category: dto.category,
     subcategory: dto.subcategory,
     description: dto.description,
-    cost: dto.cost,
+    cost: String(dto.cost),
     paidOption: dto.paidOption,
     note: dto.note,
-    */
   };
   return res;
 }

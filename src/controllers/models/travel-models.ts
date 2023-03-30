@@ -3,15 +3,14 @@ export interface PostTravelRequest {
   date: string;
   */
   country: string;
-  /*
+
   city: string;
   category: string;
   subcategory: string;
   description: string;
-  cost: number;
+  cost: string;
   paidOption: string;
-  note: string;
-  */
+  note: string | null;
 }
 
 export interface PostTravelResponse {
@@ -20,13 +19,12 @@ export interface PostTravelResponse {
   date: string;
   */
   country: string;
-  /*
+
   city: string;
   category: string;
   subcategory: string;
   description: string;
-  cost: number;
+  cost: string;
   paidOption: string;
-  note: string;
-  */
+  note: string | null;
 }
