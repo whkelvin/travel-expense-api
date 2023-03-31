@@ -1,9 +1,9 @@
-import * as usersController from '../controllers/users-controller';
+import * as travelController from '../controllers/travel-controller';
 import express from 'express';
 
 const router = express.Router();
 
 /* eslint-disable-next-line @typescript-eslint/no-misused-promises */
-router.post('', usersController.postUser);
+router.post('', travelController.postItem);
 
 export default router;

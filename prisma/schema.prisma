@@ -8,8 +8,16 @@ datasource db {
   url = env("DATABASE_URL")
 }
 
-model User {
-  userId Int @id @default(autoincrement())
-  username String @default("")
-}
+model expense {
+  itemId Int @id @default(autoincrement())
+  date DateTime
+  country String 
+  city String
+  category String
+  subcategory String
+  description String
+  cost Int
+  paidOption String
+  note String?
 
+}
