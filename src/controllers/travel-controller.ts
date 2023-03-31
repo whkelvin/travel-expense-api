@@ -11,16 +11,15 @@ async function parsePostTravelRequest(
   data: unknown
 ): Promise<PostTravelRequest> {
   const schema = yup.object().shape({
-    /*
     date: yup.string().required(),
-    */
+
     country: yup.string().required(),
 
     city: yup.string().required(),
     category: yup.string().required(),
     subcategory: yup.string().required(),
     description: yup.string().required(),
-    cost: yup.number().required().positive(),
+    cost: yup.string().required(),
     paidOption: yup.string().required(),
     note: yup.string().required(),
   });

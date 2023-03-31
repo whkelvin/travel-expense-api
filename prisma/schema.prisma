@@ -10,6 +10,7 @@ datasource db {
 
 model expense {
   itemId Int @id @default(autoincrement())
+  date DateTime
   country String 
   city String
   category String

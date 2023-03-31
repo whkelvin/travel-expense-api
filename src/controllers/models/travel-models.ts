@@ -1,7 +1,6 @@
 export interface PostTravelRequest {
-  /*
   date: string;
-  */
+
   country: string;
 
   city: string;
@@ -15,9 +14,9 @@ export interface PostTravelRequest {
 
 export interface PostTravelResponse {
   itemId: number;
-  /*
+
   date: string;
-  */
+
   country: string;
 
   city: string;

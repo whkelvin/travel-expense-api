@@ -11,9 +11,8 @@ export const createItem = async (
 ): Promise<TravelDto | null> => {
   const travel: expense | null = await prisma.expense.create({
     data: {
-      /*
       date: newTravel.date,
-      */
+
       country: newTravel.country,
 
       city: newTravel.city,
@@ -30,9 +29,9 @@ export const createItem = async (
 
   const travelDto: TravelDto = {
     itemId: travel.itemId,
-    /*
+
     date: travel.date,
-    */
+
     country: travel.country,
 
     city: travel.city,

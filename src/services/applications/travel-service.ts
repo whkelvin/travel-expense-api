@@ -13,9 +13,7 @@ export async function createItem(
   postTravelRequest: PostTravelRequest
 ): Promise<PostTravelResponse | null> {
   const travelDto: TravelDto | null = await db.createItem(
-    mapper.postTravelRequestToCreateItemDto(
-      mapper.postTravelRequestToCreateItemDto(postTravelRequest)
-    )
+    mapper.postTravelRequestToCreateItemDto(postTravelRequest)
   );
 
   if (travelDto == null) return null;

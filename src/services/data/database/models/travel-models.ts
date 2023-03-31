@@ -1,7 +1,6 @@
 export interface NewTravelDto {
-  /*
   date: Date;
-  */
+
   country: string;
 
   city: string;
@@ -15,9 +14,9 @@ export interface NewTravelDto {
 
 export interface TravelDto {
   itemId: number;
-  /*
+
   date: Date;
-  */
+
   country: string;
   city: string;
   category: string;

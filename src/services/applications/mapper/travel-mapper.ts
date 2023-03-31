@@ -16,9 +16,8 @@ export function postTravelRequestToCreateItemDto(
   // hge
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const newTravelDto: NewTravelDto = {
-    /*
-    date: postTravelRequest.date,
-    */
+    date: new Date(postTravelRequest.date),
+
     country: postTravelRequest.country,
 
     city: postTravelRequest.city,
@@ -37,9 +36,9 @@ export function travelDtoToPostTravelResponse(
 ): PostTravelResponse {
   const res: PostTravelResponse = {
     itemId: dto.itemId,
-    /*
-    date: dto.date,
-    */
+
+    date: String(dto.date),
+
     country: dto.country,
 
     city: dto.city,
