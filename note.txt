@@ -1,0 +1,25 @@
+model expense {
+  itemId Int @id @default(autoincrement())
+  date DateTime
+  country String 
+  city String
+  category String
+  subcategory String
+  description String
+  cost Int
+  paidOption String
+  note String?
+
+}
+
+ const data = {
+          date: date,
+          country: country,
+          city: city,
+          category: category,
+          subcategory: subcategory,
+          description: description,
+          cost: cost,
+          paidmethod: paidmethod,
+          note: note,
+        };
